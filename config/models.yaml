@@ -1,0 +1,46 @@
+# Modelos disponibles (identificadores de OpenRouter) y enrutado por tarea.
+# Confirma los identificadores en openrouter.ai: cambian con el tiempo.
+
+default_model: free
+
+models:
+  free:
+    id: "openrouter/free"
+    context: 32000
+    notes: "Enrutador automatico de modelos GRATUITOS de OpenRouter. Ideal para probar sin gastar."
+  deepseek:
+    id: "deepseek/deepseek-chat"
+    context: 64000
+    notes: "Buen rendimiento en razonamiento técnico."
+    price_in: 0.14      # $ por 1M tokens de entrada (orientativo, verificar en openrouter.ai)
+    price_out: 0.28     # $ por 1M tokens de salida
+  qwen:
+    id: "qwen/qwen-2.5-72b-instruct"
+    context: 32000
+    notes: "Equilibrio entre calidad y coste."
+    price_in: 0.35
+    price_out: 0.40
+  llama:
+    id: "meta-llama/llama-3.1-70b-instruct"
+    context: 128000
+    notes: "Ventana de contexto amplia."
+    price_in: 0.30
+    price_out: 0.30
+  ollama_local:
+    id: "ollama:llama3"
+    context: 8000
+    notes: "Modelo LOCAL via Ollama (requiere Ollama instalado). Preserva la confidencialidad."
+  mistral:
+    id: "mistralai/mistral-large"
+    context: 32000
+    notes: "Respuestas concisas."
+    price_in: 2.00
+    price_out: 6.00
+
+routing:
+  # Por defecto en "free" para poder probar sin coste. Para la comparativa
+  # del capitulo 6 se cambian por los modelos concretos (deepseek, qwen...).
+  interpret_scan: free
+  analyze_logs: free
+  prioritize: free
+  generate_report: free

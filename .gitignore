@@ -1,0 +1,23 @@
+# Entornos virtuales y cachés de Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Secretos: NUNCA subir claves al repositorio
+.env
+.streamlit/secrets.toml
+
+# Datos locales de cada equipo (usuarios, informes generados)
+data/usuarios.json
+output/*
+!output/.gitkeep
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Historial de análisis de cada usuario (local) y logo (se añade a mano)
+data/historial/
+assets/logo.png

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nmaprun scanner="nmap" args="nmap -sV -oX salida.xml 192.168.56.110" version="7.94">
+  <host>
+    <status state="up"/>
+    <address addr="192.168.56.110" addrtype="ipv4"/>
+    <hostnames><hostname name="webserver" type="PTR"/></hostnames>
+    <ports>
+      <port protocol="tcp" portid="22"><state state="open"/>
+        <service name="ssh" product="OpenSSH" version="8.2p1 Ubuntu"/></port>
+      <port protocol="tcp" portid="80"><state state="open"/>
+        <service name="http" product="Apache httpd" version="2.4.49"/></port>
+      <port protocol="tcp" portid="443"><state state="open"/>
+        <service name="https" product="Apache httpd" version="2.4.49"/></port>
+    </ports>
+  </host>
+</nmaprun>

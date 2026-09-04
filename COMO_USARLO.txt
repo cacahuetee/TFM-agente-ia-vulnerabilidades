@@ -1,0 +1,82 @@
+CÓMO USAR LA HERRAMIENTA (versión fácil)
+=========================================
+
+PASO 0 (IMPORTANTE): DESCOMPRIME EL ZIP PRIMERO
+-----------------------------------------------
+No abras los archivos directamente dentro del ZIP.
+  - Clic derecho sobre el archivo .zip  ->  "Extraer todo".
+  - Entra en la carpeta que aparece.
+
+PASO 1: TENER PYTHON (solo una vez)
+-----------------------------------
+Descárgalo gratis en https://www.python.org/downloads/
+En Windows, durante la instalación marca "Add Python to PATH".
+
+PASO 2: ABRIR LA HERRAMIENTA
+----------------------------
+Dentro de la carpeta del proyecto:
+
+  Windows:      doble clic en   Iniciar_Windows.bat
+  Mac / Linux:  abre una Terminal en la carpeta y escribe   bash iniciar.sh
+
+La primera vez instala lo necesario y tarda unos minutos. Después se abre
+solo en el navegador.
+
+Si con el doble clic la ventana "parpadea" y se cierra: abre la carpeta,
+haz clic en la barra de direcciones de arriba, escribe  cmd  y pulsa Enter;
+en la ventana negra escribe  Iniciar_Windows.bat  y así podrás leer el error.
+
+PASO 3: ENTRAR (dos pantallas)
+------------------------------
+  1. ¿QUIÉN ERES?  La primera vez escribe tu nombre y pulsa "Empezar".
+     Las siguientes veces solo tendrás que elegirlo de la lista. Tu nombre
+     aparecerá como autor en los informes que descargues.
+
+  2. TU CLAVE DE OPENROUTER.  Cada usuario usa su propia clave:
+       - Entra en https://openrouter.ai y crea una cuenta (email o GitHub).
+       - Menú "API Keys" -> "Create API Key". Copia la clave (sk-or-v1-...).
+       - Pégala y pulsa "Validar y entrar".
+     Solo se pide UNA vez: queda guardada en el navegador de ese equipo,
+     asociada a tu usuario, y no se vuelve a pedir (ni al recargar ni al
+     volver otro día). La herramienta no la escribe en ningún archivo.
+     Si quieres eliminarla, pulsa "Borrar mi clave" en la barra lateral.
+     Tu nombre de usuario también se recuerda entre visitas.
+     Si no tienes clave, pulsa "Continuar sin clave": verás servicios y
+     vulnerabilidades (CVE), pero no la explicación redactada por la IA.
+
+PASO 4: USAR LA HERRAMIENTA (cuatro pestañas)
+--------------------------------------------
+  ANÁLISIS DE ESCANEO
+    Lo más rápido para ver cómo funciona: pulsa "Probar con el escaneo de
+    ejemplo". O sube tu propio archivo de Nmap (XML) o Nessus (.nessus).
+    Verás un resumen (hosts, servicios, vulnerabilidades, gravedad máxima),
+    los servicios con sus CVEs en color, la lista ordenada por riesgo y el
+    contexto MITRE ATT&CK / OWASP. Pulsa "Interpretar con el modelo" para la
+    explicación de la IA y descarga el informe (HTML o Markdown), firmado
+    con tu nombre.
+
+  ANÁLISIS DE LOGS
+    Igual, pero con ficheros de registros (syslog o JSON). También tiene un
+    botón de ejemplo.
+
+  EVALUACIÓN DE MODELOS
+    Ejecuta la comparativa sobre los 4 casos de prueba del TFM. Prueba
+    primero la "Simulada" (no gasta nada). En modo "Real" te indica antes
+    el número de consultas y el coste estimado.
+
+  MI HISTORIAL
+    Cada análisis que pides se guarda con su informe. Aquí puedes volver a
+    verlos, descargarlos o borrarlos. Cada usuario ve solo los suyos.
+
+En la barra lateral puedes elegir el MODELO DE IA (con su coste orientativo),
+"Borrar mi clave" (elimina la clave guardada en el navegador) o "Cambiar
+usuario" en cualquier momento.
+
+NOTA: todo ocurre en tu propio ordenador. Lo único que se guarda en el
+equipo son los nombres de usuario (data/usuarios.json), tu historial de
+análisis (data/historial/) y los resultados de la evaluación
+(evaluation/resultados/). La clave solo vive en tu navegador, nunca en
+un archivo de la herramienta.
+
+LOGO (opcional): si colocas el logo de la EIP como  assets/logo.png , la web
+lo mostrará en la cabecera. Ver assets/LEEME.txt.

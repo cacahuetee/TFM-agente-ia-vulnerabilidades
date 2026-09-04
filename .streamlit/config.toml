@@ -1,0 +1,14 @@
+# Tema visual de la herramienta: los colores del TFM (azul marino y dorado
+# del diagrama de arquitectura del capitulo 4).
+[theme]
+primaryColor = "#1B2A4A"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F3F6FA"
+textColor = "#1F2937"
+font = "sans serif"
+
+[browser]
+gatherUsageStats = false
+
+[server]
+headless = false

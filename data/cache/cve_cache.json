@@ -1,0 +1,61 @@
+{
+  "cpe::cpe:2.3:a:vsftpd:vsftpd:2.3.4": [
+    {
+      "id": "CVE-2011-2523",
+      "cvss": 10.0,
+      "severity": "CRITICAL",
+      "description": "Puerta trasera en vsftpd 2.3.4 que abre un shell en el puerto 6200."
+    }
+  ],
+  "cpe::cpe:2.3:a:samba:samba:3.0.20": [
+    {
+      "id": "CVE-2017-7494",
+      "cvss": 9.8,
+      "severity": "CRITICAL",
+      "description": "Ejecucion remota de codigo en Samba (SambaCry)."
+    }
+  ],
+  "cpe::cpe:2.3:a:apache:http_server:2.4.49": [
+    {
+      "id": "CVE-2021-41773",
+      "cvss": 7.5,
+      "severity": "HIGH",
+      "description": "Path traversal en Apache HTTP Server 2.4.49."
+    }
+  ],
+  "cpe::cpe:2.3:a:openbsd:openssh:7.2": [
+    {
+      "id": "CVE-2016-6210",
+      "cvss": 5.9,
+      "severity": "MEDIUM",
+      "description": "Enumeracion de usuarios en OpenSSH por diferencia de tiempos."
+    }
+  ],
+  "cpe::cpe:2.3:a:openssl:openssl:1.0.1": [
+    {
+      "id": "CVE-2014-0160",
+      "cvss": 7.5,
+      "severity": "HIGH",
+      "description": "Fuga de memoria en OpenSSL (Heartbleed)."
+    }
+  ],
+  "cpe::cpe:2.3:a:openbsd:openssh:4.7p1": [],
+  "cpe::cpe:2.3:a:apache:http_server:2.2.8": [],
+  "kw::microsoft smb": [
+    {
+      "id": "CVE-2017-0144",
+      "cvss": 8.1,
+      "severity": "HIGH",
+      "description": "Ejecucion remota de codigo en SMBv1 (EternalBlue)."
+    }
+  ],
+  "kw::microsoft terminal services": [
+    {
+      "id": "CVE-2019-0708",
+      "cvss": 9.8,
+      "severity": "CRITICAL",
+      "description": "Ejecucion remota de codigo en RDP (BlueKeep)."
+    }
+  ],
+  "kw::mysql 5.0.51a-3ubuntu5": []
+}

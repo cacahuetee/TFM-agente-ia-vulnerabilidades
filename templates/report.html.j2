@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>{{ title }}</title>
+<style>
+  body { font-family: "Segoe UI", Arial, sans-serif; color: #1f2937; margin: 40px auto; max-width: 900px; line-height: 1.5; }
+  h1 { color: #1B2A4A; border-bottom: 3px solid #1B2A4A; padding-bottom: 8px; }
+  h2 { color: #2E4372; margin-top: 32px; }
+  h3 { color: #5A6B8C; }
+  .meta { color: #6B7280; font-size: 0.9em; margin-bottom: 24px; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+  th, td { border: 1px solid #d1d5db; padding: 8px 10px; text-align: left; font-size: 0.92em; }
+  th { background: #DEE6F1; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; color: #fff; font-size: 0.8em; }
+  .CRITICAL { background: #b91c1c; }
+  .HIGH { background: #ea580c; }
+  .MEDIUM { background: #d97706; }
+  .LOW { background: #65a30d; }
+  .disclaimer { background: #f3f4f6; border-left: 4px solid #1B2A4A; padding: 12px 16px; font-size: 0.9em; color: #374151; }
+  .interpretation { white-space: pre-wrap; background: #fafafa; border: 1px solid #e5e7eb; padding: 16px; border-radius: 6px; }
+</style>
+</head>
+<body>
+  <h1>{{ title }}</h1>
+  <div class="meta">
+    {% if author %}<strong>Autor:</strong> {{ author }} &nbsp;·&nbsp; {% endif %}
+    <strong>Fecha:</strong> {{ date }} &nbsp;·&nbsp;
+    <strong>Origen:</strong> {{ tool }}
+    {% if command %}<br><strong>Comando:</strong> <code>{{ command }}</code>{% endif %}
+  </div>
+
+  <h2>1. Resumen ejecutivo</h2>
+  <p>Se han analizado <strong>{{ n_hosts }}</strong> host(s), con
+     <strong>{{ n_services }}</strong> servicio(s) expuesto(s) y
+     <strong>{{ n_vulns }}</strong> vulnerabilidad(es) conocida(s).
+     Severidad más alta: <strong>{{ highest }}</strong>.</p>
+  <table>
+    <tr><th>Severidad</th><th>Nº</th></tr>
+    <tr><td>Crítica</td><td>{{ counts['CRITICAL'] }}</td></tr>
+    <tr><td>Alta</td><td>{{ counts['HIGH'] }}</td></tr>
+    <tr><td>Media</td><td>{{ counts['MEDIUM'] }}</td></tr>
+    <tr><td>Baja</td><td>{{ counts['LOW'] }}</td></tr>
+    <tr><td>Sin clasificar</td><td>{{ counts['SIN CLASIFICAR'] }}</td></tr>
+  </table>
+
+  <h2>2. Detalle por host</h2>
+  {% for host in hosts %}
+  <h3>{{ host.address }}{% if host.hostname %} ({{ host.hostname }}){% endif %}</h3>
+  <p>Estado: {{ host.state }}</p>
+  <table>
+    <tr><th>Puerto</th><th>Servicio</th><th>Producto / versión</th><th>Vulnerabilidades</th></tr>
+    {% for s in host.services %}
+    <tr>
+      <td>{{ s.port }}/{{ s.protocol }}</td>
+      <td>{{ s.service or '' }}</td>
+      <td>{{ (s.product or '') ~ ' ' ~ (s.version or '') }}</td>
+      <td>
+        {% if s.vulnerabilities %}
+          {% for v in s.vulnerabilities %}
+            {{ v.id }}{% if v.cvss is not none %} <span class="badge {{ v.severity }}">CVSS {{ v.cvss }}</span>{% endif %}{% if not loop.last %}<br>{% endif %}
+          {% endfor %}
+        {% else %}—{% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% endfor %}
+
+  {% if interpretation %}
+  <h2>3. Interpretación asistida por IA</h2>
+  <div class="interpretation">{{ interpretation }}</div>
+  {% endif %}
+
+  <h2>{% if interpretation %}4{% else %}3{% endif %}. Aviso</h2>
+  <div class="disclaimer">
+    Este informe se ha generado con apoyo de una herramienta automática. Sus
+    conclusiones deben ser revisadas por un profesional antes de tomar
+    decisiones. Las pruebas se han realizado en un entorno autorizado.
+  </div>
+</body>
+</html>

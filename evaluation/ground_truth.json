@@ -1,0 +1,32 @@
+{
+  "cases": [
+    {
+      "name": "case01_metasploitable",
+      "xml": "case01_metasploitable.xml",
+      "descripcion": "Host muy vulnerable con servicios antiguos expuestos.",
+      "expected": ["21", "ftp", "vsftpd", "2.3.4", "22", "ssh", "80", "http", "apache", "3306", "mysql", "CVE-2011-2523"],
+      "expected_absent": []
+    },
+    {
+      "name": "case02_webserver",
+      "xml": "case02_webserver.xml",
+      "descripcion": "Servidor web con Apache 2.4.49 y SSH.",
+      "expected": ["80", "http", "apache", "2.4.49", "443", "22", "ssh"],
+      "expected_absent": []
+    },
+    {
+      "name": "case03_windows",
+      "xml": "case03_windows.xml",
+      "descripcion": "Host Windows con SMB y RDP expuestos.",
+      "expected": ["445", "smb", "3389", "rdp", "135"],
+      "expected_absent": []
+    },
+    {
+      "name": "case04_limpio",
+      "xml": "case04_limpio.xml",
+      "descripcion": "Host actualizado con un solo servicio. Control de falsos positivos.",
+      "expected": ["22", "ssh", "openssh"],
+      "expected_absent": []
+    }
+  ]
+}

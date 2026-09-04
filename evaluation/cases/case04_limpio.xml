@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nmaprun scanner="nmap" args="nmap -sV -oX salida.xml 192.168.56.130" version="7.94">
+  <host>
+    <status state="up"/>
+    <address addr="192.168.56.130" addrtype="ipv4"/>
+    <hostnames><hostname name="host-actualizado" type="PTR"/></hostnames>
+    <ports>
+      <port protocol="tcp" portid="22"><state state="open"/>
+        <service name="ssh" product="OpenSSH" version="9.6p1"/></port>
+    </ports>
+  </host>
+</nmaprun>

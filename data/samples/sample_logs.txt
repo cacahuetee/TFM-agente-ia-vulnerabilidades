@@ -1,0 +1,6 @@
+Jan 10 10:00:01 servidor sshd[123]: Failed password for root from 10.0.0.5 port 51522 ssh2
+Jan 10 10:00:03 servidor sshd[124]: Failed password for root from 10.0.0.5 port 51524 ssh2
+Jan 10 10:00:05 servidor sshd[125]: Failed password for admin from 10.0.0.5 port 51526 ssh2
+{"timestamp":"2026-01-10T10:01:00","host":"web","message":"GET /admin.php 403 from 10.0.0.5"}
+{"timestamp":"2026-01-10T10:01:02","host":"web","message":"GET /wp-login.php 404 from 10.0.0.5"}
+Jan 10 10:02:00 servidor sudo: usuario : TTY=pts/0 ; COMMAND=/bin/cat /etc/shadow

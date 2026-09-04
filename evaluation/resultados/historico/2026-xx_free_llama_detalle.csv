@@ -1,0 +1,9 @@
+modelo,caso,cobertura,cubiertos,esperados,cves_no_fundamentados,latencia_s,tokens_prompt,tokens_respuesta,coste_estimado
+free,case01_metasploitable,0.917,11,12,0,5.674,398,1200,
+free,case02_webserver,0.0,0,7,0,70.521,378,1200,
+free,case03_windows,1.0,5,5,0,30.706,355,596,
+free,case04_limpio,1.0,3,3,0,29.898,302,499,
+llama,case01_metasploitable,0.583,7,12,0,28.461,389,1200,0.000477
+llama,case02_webserver,1.0,7,7,0,4.168,343,434,0.000233
+llama,case03_windows,0.2,1,5,0,29.281,350,1200,0.000465
+llama,case04_limpio,0.667,2,3,0,29.281,310,1200,0.000453

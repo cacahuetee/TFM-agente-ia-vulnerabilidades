@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nmaprun scanner="nmap" args="nmap -sV -oX salida.xml 192.168.56.120" version="7.94">
+  <host>
+    <status state="up"/>
+    <address addr="192.168.56.120" addrtype="ipv4"/>
+    <hostnames><hostname name="win-host" type="PTR"/></hostnames>
+    <ports>
+      <port protocol="tcp" portid="135"><state state="open"/>
+        <service name="msrpc" product="Microsoft Windows RPC"/></port>
+      <port protocol="tcp" portid="445"><state state="open"/>
+        <service name="microsoft-ds" product="Windows SMB"/></port>
+      <port protocol="tcp" portid="3389"><state state="open"/>
+        <service name="ms-wbt-server" product="Microsoft Terminal Services"/></port>
+    </ports>
+  </host>
+</nmaprun>

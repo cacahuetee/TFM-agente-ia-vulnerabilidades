@@ -1,0 +1,4 @@
+modelo,casos,cobertura_media,cves_no_fundamentados_total,latencia_media_s,tokens_totales,coste_estimado_total
+free,4,1.0,4,34.75,5805,
+deepseek,4,0.95,4,30.06,4055,0.0009
+mistral,4,1.0,7,16.6,5413,0.027

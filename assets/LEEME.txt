@@ -1,0 +1,4 @@
+Coloca aqui el logo de la EIP con el nombre  logo.png  (PNG con fondo
+transparente, ~400 px de ancho). Si el fichero existe, la web lo muestra
+en la cabecera y en las pantallas de entrada. Si no existe, la web
+funciona igual y muestra solo el titulo.

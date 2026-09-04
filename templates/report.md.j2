@@ -1,0 +1,47 @@
+# {{ title }}
+
+{% if author %}**Autor:** {{ author }}  {% endif %}
+**Fecha:** {{ date }}
+**Herramienta de origen:** {{ tool }}
+{% if command %}**Comando:** `{{ command }}`{% endif %}
+
+## 1. Resumen ejecutivo
+
+Se han analizado **{{ n_hosts }}** host(s), con un total de **{{ n_services }}** servicio(s)
+expuesto(s) y **{{ n_vulns }}** vulnerabilidad(es) conocida(s) identificada(s).
+Severidad más alta detectada: **{{ highest }}**.
+
+| Severidad | Nº |
+|-----------|----|
+| Crítica | {{ counts['CRITICAL'] }} |
+| Alta | {{ counts['HIGH'] }} |
+| Media | {{ counts['MEDIUM'] }} |
+| Baja | {{ counts['LOW'] }} |
+| Sin clasificar | {{ counts['SIN CLASIFICAR'] }} |
+
+## 2. Detalle por host
+
+{% for host in hosts %}
+### {{ host.address }}{% if host.hostname %} ({{ host.hostname }}){% endif %}
+
+Estado: {{ host.state }}
+
+| Puerto | Servicio | Producto/versión | Vulnerabilidades |
+|--------|----------|------------------|------------------|
+{% for s in host.services %}
+| {{ s.port }}/{{ s.protocol }} | {{ s.service or '' }} | {{ (s.product or '') ~ ' ' ~ (s.version or '') }} | {% if s.vulnerabilities %}{% for v in s.vulnerabilities %}{{ v.id }}{% if v.cvss is not none %} (CVSS {{ v.cvss }}){% endif %}{% if not loop.last %}, {% endif %}{% endfor %}{% else %}—{% endif %} |
+{% endfor %}
+
+{% endfor %}
+
+{% if interpretation %}
+## 3. Interpretación asistida por IA
+
+{{ interpretation }}
+
+{% endif %}
+## {% if interpretation %}4{% else %}3{% endif %}. Aviso
+
+Este informe se ha generado con apoyo de una herramienta automática. Sus
+conclusiones deben ser revisadas por un profesional antes de tomar decisiones.
+Las pruebas se han realizado en un entorno autorizado.
